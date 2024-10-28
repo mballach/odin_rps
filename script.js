@@ -33,5 +33,46 @@ function getHumanChoice() {
     }
 }
 
+function playRound(humanChoice, computerChoice) {
+    console.log("Computer has selected " +computerChoice)
+    let result = humanChoice+computerChoice;
+
+    switch (result) {
+        case "rockrock":
+        case "paperpaper":
+        case "scissorsscissors":
+            console.log("It's a tie! You both selected "+humanChoice);
+            break;
+        case "rockpaper":
+            console.log("You selected rock and computer selected paper, you lose!");
+            computerScore++;
+            break;
+        case "rockscissors":
+            console.log("You selected rock and computer selected scissors, you win!");
+            humanScore++;
+            break;
+        case "paperrock":
+            console.log("You selected paper and computer selected rock, you win!");
+            humanScore++;
+            break;
+        case "paperscissors":
+            console.log("You selected paper and computer selected scissors, you lose!");
+            computerScore++;
+            break;
+        case "scissorsrock":
+            console.log("You selected scissors and computer selected rock, you lose!");
+            computerScore++;
+            break;
+        case "scissorspaper":
+            console.log("You selected scissors and computer selected paper, you win!");
+            humanScore++;
+            break;
+    }
+    console.log(`Your score: ${humanScore}  -  Computer score: ${computerScore}`);
+}
+
+/*const humanSelection = getHumanChoice();
+const computerSelectoin = getComputerChoice();
+*/
 
 
