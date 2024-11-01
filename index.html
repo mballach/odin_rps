@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./script.js"></script>
+    
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <h1>Car's Great Rock Paper Scissor Matchup</h1>
+    <h3>Select an entry:</h3>
+    <div class="entryButtons">
+        <div id="rock" class="btn" >ROCK</div>
+        <div id="paper" class="btn" >PAPER</div>
+        <div id="scissors" class="btn" >SCISSORS</div>
+    </div>
+    <div class="scoreBox">
+        <div class="scoreLine">
+            <div>Human Score:</div><div class="score" id="humScore">0</div>
+        </div>
+        <div class="scoreLine">
+            <div>Computer Score:</div><div class="score" id="cpuScore">0</div>
+        </div>
+    </div>  
+    <div class="results">
+        <div class="inner_result" id="lastRound"></div>
+        <div class="inner_result" id="summaryText"></div>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
